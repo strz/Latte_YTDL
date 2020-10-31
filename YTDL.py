@@ -41,22 +41,22 @@ def downloader(external_path, videos_list):
 if __name__ == "__main__":
 
     UID = getpass.getuser()
+    C_DRIVE_BASIC_PATH = 'C:/Users/' + UID
     
-    YTDL_ABS_PATH = os.path.abspath('..').replace('\\', '/')
+#    YTDL_ABS_PATH = os.path.abspath('..').replace('\\', '/')
     # This path initializes to C:\Users\USERNAME. and add paths by Subcategory list below
-    # 
 
     Subcategory = ['Videos', 'YTDL', 'VTubers', 'にじさんじ KR']  # Note that 'Videos' is Windows default path.
     # In order to stores videos at different path, open CMD and check what your directory is.
     # Hint : type 'dir' shows you what directory you have, 'cd' [Directory] moves your current working path
 
     for t in Subcategory:
-        YTDL_ABS_PATH += '/' + t
-        if os.path.exists(YTDL_ABS_PATH):
-            print(f'the path {YTDL_ABS_PATH} already exists')
+        C_DRIVE_BASIC_PATH += '/' + t
+        if os.path.exists(C_DRIVE_BASIC_PATH):
+            print(f'the path {C_DRIVE_BASIC_PATH} already exists')
         else:
-            os.mkdir(YTDL_ABS_PATH)
-            print(f'Created a path {YTDL_ABS_PATH}')
+            os.mkdir(C_DRIVE_BASIC_PATH)
+            print(f'Created a path {C_DRIVE_BASIC_PATH}')
     # this FOR statement helps you create the path whether it does really exist or not
     # if the path already exists
 
