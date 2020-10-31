@@ -104,7 +104,7 @@ def downloader(external_path, videos_list):
             'writethumbnail': 'best',# If there is no thumbnail, then YTDL will automatically choose *.webp extension.
             'nooverwrites': True,
             # prevents duplicated download if the video already exists at the same path. does not work if the save path is different.
-            'geo_bypass': False,
+            'geo_bypass': False
             # Use when you're restricted by legion lock. However, basically VTuber streams are globally open.
             # 'skip_download': True  # Test code. Skips download.
         }
@@ -118,7 +118,7 @@ def downloader(external_path, videos_list):
 
 if __name__ == "__main__":
 
-    YTDL_ABS_PATH = os.path.abspath(os.path.join('..', '..', '..', )).replace('\\', '/')
+    YTDL_ABS_PATH = os.path.abspath(os.path.join('..', '..', '..')).replace('\\', '/')
     # This path initializes to C:\Users\USERNAME. and add paths by Subcategory list below
 
     Subcategory = ['Videos', 'YTDL', 'VTubers', 'にじさんじ KR']  # Note that 'Videos' is Windows default path.
