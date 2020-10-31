@@ -83,6 +83,11 @@ Pythonが初めてで、ただ動画や再生リストをダウンロードす�
 4.F5を押してダウンロードを始めてください。
 ##########
 
+1.1 Fixed a problem that the path of YTDL.py requires specific path. Now always initializes by [C://User/Username], hence works well anywhere on the computer. (Personal folder, background, etc)
+
+
+
+
 """
 
 import os
@@ -118,7 +123,7 @@ def downloader(external_path, videos_list):
 
 if __name__ == "__main__":
 
-    YTDL_ABS_PATH = os.path.abspath(os.path.join('..', '..', '..')).replace('\\', '/')
+    YTDL_ABS_PATH = os.path.abspath('..').replace('\\', '/')
     # This path initializes to C:\Users\USERNAME. and add paths by Subcategory list below
 
     Subcategory = ['Videos', 'YTDL', 'VTubers', 'にじさんじ KR']  # Note that 'Videos' is Windows default path.
