@@ -62,9 +62,8 @@ if __name__ == "__main__":
 
     # Now, ignite sequences
     URLS = [
-        'https://youtu.be/ntbaT9_YM2I',
-        'https://youtu.be/n5anMdABRK0'
+        'https://youtu.be/TswkvhItSZQ'
     ]  # This link is a sample. Ryu Hari's Weird DJ Party, Suha and Boni(Nijisanji ID)'s APEX Legends Collaboration.
     # Since URLS is list, you can add links as many as you want. But you can't distribute links individually.
     # Note that PLAYLIST also works. YoutubeDL code will automatically analyze and start download.
-    downloader(external_path=YTDL_ABS_PATH, videos_list=URLS)
+    downloader(external_path=C_DRIVE_BASIC_PATH, videos_list=URLS)
